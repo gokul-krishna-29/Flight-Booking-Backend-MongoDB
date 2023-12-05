@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tickets.css" />
+    <title>Airline App - Tickets</title>
+  </head>
+  <body>
+    <div id="flights-container">
+      <h2>Available Flights</h2>
+      <br />
+    </div>
+
+    <!-- Model for booking a flight -->
+    <div id="booking-model" class="model">
+      <div class="model-content">
+        <span class="close" onclick="closeBookingModel()">&times;</span>
+        <h2>Book Flight</h2>
+        <form id="booking-form">
+          <!-- Add form elements for user details from model.user.js -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+
+          <label for="flight-name">Flight Name:</label>
+          <p id="flight-name"></p>
+
+          <label for="flight-price">Flight Price:</label>
+          <p id="flight-price"></p>
+
+          <label for="count">Count:</label>
+          <input type="number" id="count" value="1" min="1" required />
+
+          <!-- Add more form elements as needed -->
+
+          <button type="button" onclick="submitBooking()">
+            Submit Booking
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="tickets.js"></script>
+  </body>
+</html>
